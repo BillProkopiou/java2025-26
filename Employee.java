@@ -5,6 +5,8 @@ public class Employee {
     private String email;
     private String password;
 
+    //Constructor
+
     public Employee(String fullName , String username , String email , String password){
 
         this.fullName = fullName;
@@ -13,6 +15,8 @@ public class Employee {
         this.password = password;
 
     }
+
+    //Getters
 
     public String getFullName() {
         return fullName;
@@ -29,6 +33,8 @@ public class Employee {
     public String getPassword() {
         return password;
     }
+
+    //Setters
 
     public void setFullName(String fullName) {
         this.fullName = fullName;

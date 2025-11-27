@@ -9,6 +9,8 @@ public class Car{
     private String colour;
     private boolean availability;
 
+    //Constructor
+
     public Car(int id , String plate , String brand , String type , String model , int year , String colour , boolean availability){
 
         this.id = id;
@@ -21,6 +23,8 @@ public class Car{
         this.availability = availability;
 
     }
+
+    //Getters
 
     public int getId() {
         return id;
@@ -54,6 +58,8 @@ public class Car{
         return availability;
     }
 
+    //Setters
+
     public void setId(int id) {
         this.id = id;
     }
@@ -85,5 +91,29 @@ public class Car{
     public void setAvailability(boolean availability) {
         this.availability = availability;
     }
+
+    @Override
+    public String toString() {
+        return ("id: " + id + " plate: " + plate + " brand: " + brand + " type: " + type + " model: " + model + " Year: " + year + " colour: " + colour + " availability: " + availability);
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if(this == obj){
+            return true;
+        }
+
+        if(!(obj instanceof Car)){
+            return false;
+        }
+        Car car = (Car) obj;
+        return car.getId() == id || car.getPlate().equals(this.plate);
+    }
+
+    @Override
+    public int hashCode(){
+        return java.util.Objects.hash(id,plate);
+    }
+
 
 }

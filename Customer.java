@@ -5,6 +5,8 @@ public class Customer {
     private int number;
     private String email;
 
+    //Constructor
+
     public Customer(int AFM , String fullName , int number , String email){
 
         this.AFM = AFM;
@@ -13,7 +15,9 @@ public class Customer {
         this.email = email;
 
     }
-//:)
+
+    //Getters
+
     public int getAFM() {
         return AFM;
     }
@@ -29,6 +33,8 @@ public class Customer {
     public String getEmail() {
         return email;
     }
+
+    //Setters
 
     public void setAFM(int AFM) {
         this.AFM = AFM;
