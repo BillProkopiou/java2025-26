@@ -13,7 +13,7 @@ public class Customer {
         this.email = email;
 
     }
-
+//:)
     public int getAFM() {
         return AFM;
     }
