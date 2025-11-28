@@ -12,6 +12,16 @@ public class Main {
         Car c3 = new Car(3 , "AU7632" , "Nissan" , "4WD" , "Mikra" , 2020 , "White" , true);
         Car c4 = new Car(4 , "BL0093" , "Toyota" , "4WD" , "Hilux" , 2000 , "Gray" , true);
         Employee e1 = new Employee("Xrhstos Nikolaros" , "Trobas" , "ilovemath@gmail.com" , "myTipCreamy34");
+        Employee e2 = new Employee("Jack Black" , "Jack" , "ingoff@gmail.com" , "myTipSticky34");
+
+        EmployeeSorter.safeAddEmployee(employees , e1);
+        EmployeeSorter.safeAddEmployee(employees , e2);
+
+        for(Employee a : employees){
+            System.out.println(a);
+        }
+
+        System.out.println();
 
         CarSorter.safeAddCar(cars , c1);
         CarSorter.safeAddCar(cars , c2);

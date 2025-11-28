@@ -57,4 +57,19 @@ public class Employee {
         return "fullName: " + fullName + " username: " + username + " email: " + email + " password: " + password;
     }
 
+    @Override
+    public boolean equals(Object obj) {
+        if(this == obj){
+            return true;
+        }
+
+        if(!(obj instanceof Employee)){
+            return false;
+        }
+
+        Employee emp = (Employee) obj;
+
+        return emp.username.equals(this.username) || emp.email.equals(this.email);
+
+    }
 }
