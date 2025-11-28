@@ -13,10 +13,10 @@ public class Main {
         Car c4 = new Car(4 , "BL0093" , "Toyota" , "4WD" , "Hilux" , 2000 , "Gray" , true);
         Employee e1 = new Employee("Xrhstos Nikolaros" , "Trobas" , "ilovemath@gmail.com" , "myTipCreamy34");
 
-        Car.safeAddCar(cars , c1);
-        Car.safeAddCar(cars , c2);
-        Car.safeAddCar(cars , c3);
-        Car.safeAddCar(cars , c4);
+        CarSorter.safeAddCar(cars , c1);
+        CarSorter.safeAddCar(cars , c2);
+        CarSorter.safeAddCar(cars , c3);
+        CarSorter.safeAddCar(cars , c4);
 
         for(Car a :cars){
             System.out.println(a);

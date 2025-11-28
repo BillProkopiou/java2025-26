@@ -3,6 +3,19 @@ import java.util.Comparator;
 
 public class CarSorter {
 
+    public static void safeAddCar(ArrayList<Car> a , Car b){
+
+        for(Car car : a){
+            if(car.equals(b)){
+                System.out.println("Error the car already exists!");
+                return;
+            }
+        }
+
+        a.add(b);
+
+    }
+
     public static void sortById(ArrayList<Car> cars) {
         cars.sort(Comparator.comparingInt(Car::getId));
     }

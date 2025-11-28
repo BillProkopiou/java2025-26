@@ -112,17 +112,4 @@ public class Car{
         return car.getId() == id || car.getPlate().equals(this.plate);
     }
 
-    public static void safeAddCar(ArrayList<Car> a , Car b){
-
-        for(Car car : a){
-            if(car.equals(b)){
-                System.out.println("Error the car already exists!");
-                return;
-            }
-        }
-
-        a.add(b);
-
-    }
-
 }
