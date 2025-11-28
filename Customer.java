@@ -2,12 +2,12 @@ public class Customer {
 
     private int AFM;
     private String fullName;
-    private int number;
+    private long number;
     private String email;
 
     //Constructor
 
-    public Customer(int AFM , String fullName , int number , String email){
+    public Customer(int AFM , String fullName , long number , String email){
 
         this.AFM = AFM;
         this.fullName = fullName;
@@ -26,7 +26,7 @@ public class Customer {
         return fullName;
     }
 
-    public int getNumber() {
+    public long getNumber() {
         return number;
     }
 
@@ -44,12 +44,33 @@ public class Customer {
         this.fullName = fullName;
     }
 
-    public void setNumber(int number) {
+    public void setNumber(long number) {
         this.number = number;
     }
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    @Override
+    public String toString() {
+        return "AFM: " + AFM + " fullname: " + fullName + " Number: " + number + " email: " + email;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if(this == obj){
+            return true;
+        }
+
+        if(!(obj instanceof Customer)){
+            return false;
+        }
+
+        Customer cus = (Customer) obj;
+
+        return cus.AFM == (this.AFM) || cus.email.equals(this.email) || cus.number == this.number;
+
     }
 
 }

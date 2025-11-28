@@ -13,11 +13,20 @@ public class Main {
         Car c4 = new Car(4 , "BL0093" , "Toyota" , "4WD" , "Hilux" , 2000 , "Gray" , true);
         Employee e1 = new Employee("Xrhstos Nikolaros" , "Trobas" , "ilovemath@gmail.com" , "myTipCreamy34");
         Employee e2 = new Employee("Jack Black" , "Jack" , "ingoff@gmail.com" , "myTipSticky34");
+        Customer cus1 = new Customer(12812374 , "William Afton" , 6978345634L , "harharhar@gmail.com");
 
         EmployeeSorter.safeAddEmployee(employees , e1);
         EmployeeSorter.safeAddEmployee(employees , e2);
 
         for(Employee a : employees){
+            System.out.println(a);
+        }
+
+        System.out.println();
+
+        CustomerSorter.safeAddCustomer(customers , cus1);
+
+        for(Customer a : customers){
             System.out.println(a);
         }
 
