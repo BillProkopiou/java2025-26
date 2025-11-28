@@ -51,5 +51,10 @@ public class Employee {
     public void setPassword(String password) {
         this.password = password;
     }
-    
+
+    @Override
+    public String toString() {
+        return "fullName: " + fullName + " username: " + username + " email: " + email + " password: " + password;
+    }
+
 }
