@@ -11,6 +11,7 @@ public class Rental {
 
     public Rental(int rentalId , Car car , Customer customer , String begin , String expire , Employee employee){
         this.rentalId = rentalId;
+        car.setAvailability(false);
         this.car = car;
         this.customer = customer;
         this.begin = begin;
@@ -68,5 +69,10 @@ public class Rental {
 
     public void setEmployee(Employee employee) {
         this.employee = employee;
+    }
+
+    @Override
+    public int hashCode() {
+        return rentalId;
     }
 }
