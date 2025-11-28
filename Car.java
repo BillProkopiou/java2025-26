@@ -110,10 +110,4 @@ public class Car{
         return car.getId() == id || car.getPlate().equals(this.plate);
     }
 
-    @Override
-    public int hashCode(){
-        return java.util.Objects.hash(id,plate);
-    }
-
-
 }
