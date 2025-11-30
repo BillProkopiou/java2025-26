@@ -13,8 +13,7 @@ public class Rental {
 
     public Rental(int rentalId , Car car , Customer customer , String begin , String expire , Employee employee){
         if(!car.isAvailable()){
-            System.out.println("This car cant be rented!");
-            return;
+            throw new IllegalArgumentException("This car cant be rented!");
         }
         this.rentalId = rentalId;
         car.setAvailability(false);
@@ -59,8 +58,7 @@ public class Rental {
 
     public void setCar(Car car) {
         if(!car.isAvailable()){
-            System.out.println("This car cant be rented!");
-            return;
+            throw new IllegalArgumentException("This car cant be rented!");
         }
         this.car = car;
     }
@@ -83,7 +81,7 @@ public class Rental {
 
     @Override
     public String toString() {
-        return "ID: " + rentalId + " Car: " + car + " Customer: " + customer + " Rented: " + begin + " Return by: " + expire + " Rented with the help of: " + employee;
+        return "ID: " + rentalId + "\nCar: " + car + "\nCustomer: " + customer + " Rented: " + begin + " Return by: " + expire + "\nRented with the help of: " + employee;
     }
 
     @Override
