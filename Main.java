@@ -6,14 +6,28 @@ public class Main {
         ArrayList<Car> cars = new ArrayList<>();
         ArrayList<Employee> employees = new ArrayList<>();
         ArrayList<Customer> customers = new ArrayList<>();
+        ArrayList<Rental> rentals = new ArrayList<>();
 
         Car c1 = new Car(1 , "PN3225" , "Toyota" , "Gamato" , "Corolla" , 1970 , "Red" , true);
         Car c2 = new Car(5 , "MK9983" , "Toyota" , "Gamato" , "Corolla" , 1970 , "Red" , true);
         Car c3 = new Car(3 , "AU7632" , "Nissan" , "4WD" , "Mikra" , 2020 , "White" , true);
         Car c4 = new Car(4 , "BL0093" , "Toyota" , "4WD" , "Hilux" , 2000 , "Gray" , true);
+
         Employee e1 = new Employee("Xrhstos Nikolaros" , "Trobas" , "ilovemath@gmail.com" , "myTipCreamy34");
         Employee e2 = new Employee("Jack Black" , "Jack" , "ingoff@gmail.com" , "myTipSticky34");
+
         Customer cus1 = new Customer(12812374 , "William Afton" , 6978345634L , "harharhar@gmail.com");
+
+        Rental r1 = new Rental(1 , c1 , cus1 , "10/10/25" , "10/11/25" , e1);
+
+        Rental.safeAddRental(rentals , r1);
+        Rental.safeAddRental(rentals , r1);
+
+        for(Rental r : rentals){
+            System.out.println(r);
+        }
+
+        System.out.println();
 
         EmployeeSorter.safeAddEmployee(employees , e1);
         EmployeeSorter.safeAddEmployee(employees , e2);
